@@ -1,0 +1,30 @@
+[client]
+port=3306
+default-character-set=utf8
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Default to using old password format for compatibility with mysql 3.x
+# clients (those using the mysqlclient10 compatibility package).
+old_passwords=1
+default-character-set=utf8
+max_connections=160
+interactive_timeout=310000
+wait_timeout=31000
+query_cache_size=48M
+table_cache=320
+tmp_table_size=52M
+thread_cache_size=8
+sort_buffer_size=256K
+innodb_thread_concurrency=8
+myisam-recover=FORCE
+max_allowed_packet=32M
+innodb_file_per_table=1
+# Disabling symbolic-links is recommended to prevent assorted security risks;
+# to do so, uncomment this line:
+# symbolic-links=0
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
