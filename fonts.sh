@@ -6,3 +6,7 @@ tar -zxvf yahei.tar.gz -C /usr/share/fonts/
 mkfontscale
 mkfontdir
 fc-cache -fv
+: << !
+test
+123
+!
