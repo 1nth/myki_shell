@@ -7,3 +7,4 @@ mkfontscale
 mkfontdir
 fc-cache -fv
 #test
+#dev
